@@ -23,15 +23,27 @@ function () {
 }
 
 
-const mainNavSections = document.querySelectorAll('.main-nav__section');
-mainNavSections.forEach(section => {
-  section.addEventListener("click", function() {   
-   mainNavSections.forEach(e=>{
-      e.id = "main-nav__section-non-active";
-    });
-     section.id = "main-nav__section-active";
-  });  
-});
+
+
+window.addEventListener('wheel', function(e) {
+  console.log(e.deltaY);
+  let scrollPosition = 0;
+  if (e.deltaY > scrollPosition) {
+    scrollPosition = e.deltaY;
+    if (window.location.pathname == "/Personal-Portfolio/index.html") {
+      window.location.pathname = "/Personal-Portfolio/projects.html";
+    } else if (window.location.pathname == "/Personal-Portfolio/projects.html") {
+      window.location.pathname = "/Personal-Portfolio/about.html";
+    }
+  } else {
+    scrollPosition = e.deltaY;
+    if (window.location.pathname == "/Personal-Portfolio/projects.html") {
+      window.location.pathname = "/Personal-Portfolio/index.html";
+    } else if (window.location.pathname == "/Personal-Portfolio/about.html") {
+      window.location.pathname = "/Personal-Portfolio/projects.html";
+    }
+  }
+})
 
 /* --- Morphing animation -- */
 const tween = KUTE.fromTo(

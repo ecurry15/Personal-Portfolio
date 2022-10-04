@@ -2,6 +2,7 @@
   --dark-blue: #05141F;
   --white: #fff;
   --light-blue: #175887;
+  --load-time: 500ms;
 }
 
 
@@ -22,6 +23,7 @@ body {
 .home {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 .main-nav {
   width: 100%;
@@ -33,6 +35,10 @@ body {
   position: fixed;
   justify-content: space-between;
   top: 0;
+  animation: nav-load var(--load-time) ease-in;
+}
+#nav2 {
+  animation: nav-2-load var(--load-time) ease-in;
 }
 .main-nav__social-icons-container {
   display: flex;
@@ -103,8 +109,8 @@ background-color: var(--light-blue);
 .main-nav__sections-container {
   display: flex;
   align-items: center;
-  padding-right: 150px;
-  gap: 15px;
+  padding-right: 80px;
+  gap: 10px;
 }
 .main-nav__section {
   color: var(--white);
@@ -112,11 +118,13 @@ background-color: var(--light-blue);
   font-size: 1.5rem;
   font-weight: 500;
   position: relative;
-  padding: 5px 0;
+  padding: 10px;
   transition: all .2s ease-in-out;
+  border-radius: 5px;
 }
 #main-nav__section-active {
   border-bottom: 3px solid var(--light-blue);
+  background-color: var(--light-blue);
 }
 #main-nav__section-non-active:hover {
 color: var(--light-blue);
@@ -136,14 +144,12 @@ color: var(--light-blue);
   flex-direction: column;
   justify-content: left;
 }
-.home__main-content-right {
-  height: 100%;
-}
 .hero {
   position: relative;
   margin: 0;
   padding-left: 0;
   text-align: left;
+  animation: hero-load var(--load-time) ease-in;
 }
 .hero__hello {
   font-size: 2.8rem;
@@ -186,6 +192,7 @@ color: var(--light-blue);
   cursor: pointer;
   width: 60%;
   transition: all .2s ease-in-out;
+  animation: hero-load var(--load-time) ease-in;
 }
 .hero__description:hover {
   transform: scale(1.005);
@@ -211,6 +218,7 @@ color: var(--light-blue);
   margin-top: auto;
   padding-left: 5px;
   width: 60%;
+  animation: hero-load var(--load-time) ease-in;
 }
 .left__skills > h2 {
 font-size: 2.7rem;
@@ -242,6 +250,9 @@ border-bottom: 4px solid var(--light-blue);
 .icon:hover {
   transform: scale(1.05);
 }
+.icon:hover > i {
+  color: var(--light-blue);
+}
 .icon > i {
   font-size: 3rem;
   color: var(--dark-blue);
@@ -249,3 +260,104 @@ border-bottom: 4px solid var(--light-blue);
 .javascript-title {
   font-size: .95rem !important;
 }
+.home__main-content-right {
+  height: 100%;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.home__right-img-container {
+  position: relative;
+  width: 521px;
+  height: 584px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.home__right-img-container:hover > img {
+transform: scale(1.02);
+}
+.home__right-img-container > img {
+  z-index: 5;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  animation: img-load var(--load-time) ease-in;
+}
+.home__picture-circle {
+  width: 503px;
+  height: 522px;
+  position: absolute;
+  z-index: 2;
+  top: 70px;
+  animation: img-background-load var(--load-time) ease-in;
+}
+.picture-svg {
+  width: 488px;
+  height: 352px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  animation: img-background-load var(--load-time) ease-in;
+}
+#blob4 {
+  visibility: hidden;
+}
+.projects {
+  width: 100%;
+  height: 100vh;
+}
+/* ANIMATIONS ---- */
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes nav-2-load {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes hero-load {
+  0% {
+    transform: translatex(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+@keyframes img-load {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes img-background-load {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+/* ANIMATIONS END---- */
