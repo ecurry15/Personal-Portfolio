@@ -482,4 +482,19 @@ transform: scale(1.02);
     top: 30px;
     right: 20px;
   }
+  .scroll-icon {
+	width: 1.7em;
+	height: 3.7em;
+	border: .27em solid var(--light-blue);
+	border-radius: 1.7em;
+}
+
+.scroll-icon.ex-1 .wheel {
+	width: .55em;
+	height: .55em;
+	border-radius: .55em;
+}
+.scroll-tag {
+  font-size: 1rem;
+}
 }
