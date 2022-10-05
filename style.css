@@ -24,6 +24,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 .main-nav {
   width: 100%;
@@ -134,7 +135,74 @@ color: var(--light-blue);
   width: 100%;
   height: calc(100% - 200px);
   margin-top: 200px;
+  position: relative;
 }
+.scroll-icon {
+	position: relative;
+  top: 70px;
+  left: 50%;
+	margin: 2em;
+	width: 2em;
+	height: 4em;
+	border: .3em solid var(--light-blue);
+	border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: scroll-load 16s ease-in infinite 3s;
+}
+
+.scroll-icon.ex-1 .wheel {
+	position: absolute;
+	left: 50%;
+	top: 15%;
+	width: .6em;
+	height: .6em;
+	background-color: var(--light-blue);
+	transform: translate(-50%, 0);
+	border-radius: .6em;
+	animation: ex-1-wheel 1s ease-in-out infinite;
+}
+.scroll-tag {
+  position: absolute;
+  bottom: -25px;
+  color: var(--light-blue);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+}
+
+@keyframes scroll-load {
+0% {
+  opacity: 0;
+}
+15% {
+  opacity: 1;
+}
+40% {
+  opacity: 0;
+}
+
+100% {
+  opacity: 0;
+}
+
+}
+@keyframes ex-1-wheel {
+	0% {
+		transform: translate(-50%, 0);
+		opacity: 0;
+	}
+	20%, 70% {
+		opacity: 1;
+	}
+	90%, 100% {
+		transform: translate(-50%, 150%);
+		opacity: 0;
+	}
+}
+
 .home__main-content-left {
   width: 830px;
   height: 100%;
