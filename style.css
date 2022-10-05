@@ -132,6 +132,7 @@ color: var(--light-blue);
 }
 .home__main-content {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: calc(100% - 200px);
   margin-top: 200px;
@@ -206,11 +207,14 @@ color: var(--light-blue);
 .home__main-content-left {
   width: 830px;
   height: 100%;
-  padding-left: 145px;
   padding-top: 100px;
+  padding-left: 145px;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: left;
+  margin-right: auto;
+  left: 0;
 }
 .hero {
   position: relative;
