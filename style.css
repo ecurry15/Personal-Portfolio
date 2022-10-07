@@ -15,6 +15,7 @@ body {
   justify-content: center;
 }
 
+
 .main-wrapper {
  max-width: 1660px;
  width: 100%;
@@ -380,7 +381,121 @@ transform: scale(1.02);
 .projects {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
+.projects__main-content {
+  height: calc(100% - 160px);
+  margin-top: 160px;
+  padding-left: 150px;
+  width: 100%;
+  max-width: 1660px;
+  height: 100%;
+  position: relative;
+}
+.projects__title {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+.projects-container {
+  width: 100%;
+  height: 72%;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+ overflow-x: auto;
+ flex-wrap: nowrap;
+}
+.projects-container::-webkit-scrollbar {
+ height: 11px;
+ cursor: pointer;
+}
+.projects-container::-webkit-scrollbar-thumb {
+  background-color: var(--light-blue);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.projects-container::-webkit-scrollbar-track {
+  background-color: #E7E7E7;
+  cursor: pointer;
+}
+
+.project-card {
+  height: 96%;
+  width: 580px;
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 auto;
+ margin: 0 20px;
+}
+.project-card__title {
+  color: var(--white);
+  width: 85%;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+.project-card__img-container {
+background-color: #E7E7E7;
+width: 85%;
+height: 240px;
+margin-top: 30px;
+border-radius: 10px;
+}
+
+.project-card__language {
+  color: var(--white);
+  width: 85%;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: 500;
+}
+.project-card__description {
+  color: var(--white);
+  font-size: 1.25rem;
+  width: 85%;
+  text-align: left;
+  margin-top: 20px;
+  line-height: 1.4;
+  max-height: 160px;
+  overflow: hidden;
+}
+.project-card__footer {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  gap: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+.project-card__footer > a {
+  text-decoration: none;
+  color: var(--white);
+}
+.project-card__footer > a:hover {
+  color: var(--light-blue);
+}
+.projects__view-all {
+  position: absolute;
+  left: 50%;
+  text-decoration: none;
+  color: var(--light-blue);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-top: 10px;
+}
+.projects__view-all:hover {
+  text-decoration: underline;
+}
+
+
 /* ANIMATIONS ---- */
 @keyframes nav-load {
   0% {
