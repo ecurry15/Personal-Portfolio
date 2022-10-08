@@ -412,7 +412,7 @@ transform: scale(1.02);
 }
 .projects-container::-webkit-scrollbar-thumb {
   background-color: var(--light-blue);
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
 }
 .projects-container::-webkit-scrollbar-track {
@@ -421,17 +421,23 @@ transform: scale(1.02);
 }
 
 .project-card {
-  height: 96%;
+  height: 94%;
   width: 580px;
-  background-color: var(--dark-blue);
+  background: var(--dark-blue);
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 0 auto;
- margin: 0 20px;
+ margin: auto 20px;
+cursor: pointer;
+transition: all .12s ease-in-out;
 }
+.project-card:hover {
+  transform: scale(1.03);
+}
+
 .project-card__title {
   color: var(--white);
   width: 85%;
