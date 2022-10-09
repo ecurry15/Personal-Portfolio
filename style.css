@@ -402,7 +402,7 @@ transform: scale(1.02);
   height: 72%;
   margin-top: 20px;
   display: flex;
-  gap: 20px;
+  gap: 10px;
  overflow-x: auto;
  flex-wrap: nowrap;
 }
@@ -421,7 +421,7 @@ transform: scale(1.02);
 }
 
 .project-card {
-  height: 94%;
+  height: 92%;
   width: 580px;
   background: var(--dark-blue);
   border-radius: 12px;
@@ -430,13 +430,11 @@ transform: scale(1.02);
   flex-direction: column;
   align-items: center;
   flex: 1 0 auto;
- margin: auto 20px;
+ margin: auto 30px;
 cursor: pointer;
 transition: all .12s ease-in-out;
 }
-.project-card:hover {
-  transform: scale(1.03);
-}
+
 
 .project-card__title {
   color: var(--white);
@@ -496,11 +494,18 @@ border-radius: 10px;
   font-weight: 500;
   font-size: 1.2rem;
   padding-top: 10px;
+  display: flex;
+  align-items: center;
+  transition: all .2s ease-in-out;
 }
-.projects__view-all:hover {
-  text-decoration: underline;
+.projects__view-all > i {
+  padding-left: 10px;
+  font-size: 1.06rem;
+  transition: all .2s ease-in-out;
 }
-
+.projects__view-all:hover > i {
+  padding-left: 15px;
+}
 
 /* ANIMATIONS ---- */
 @keyframes nav-load {
