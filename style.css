@@ -431,7 +431,6 @@ transform: scale(1.02);
   align-items: center;
   flex: 1 0 auto;
  margin: auto 30px;
-cursor: pointer;
 transition: all .12s ease-in-out;
 }
 
@@ -447,9 +446,10 @@ transition: all .12s ease-in-out;
 .project-card__img-container {
 background-color: #E7E7E7;
 width: 85%;
-height: 240px;
+height: 50%;
 margin-top: 30px;
 border-radius: 10px;
+transition: all .3s ease-in-out;
 }
 
 .project-card__language {
@@ -458,6 +458,23 @@ border-radius: 10px;
   text-align: left;
   margin-top: 15px;
   font-weight: 500;
+  position: relative;
+}
+#projectDescriptionClose {
+position: absolute;
+right: 0;
+padding: 2px 5px;
+border-radius: 5px;
+background-color: var(--light-blue);
+font-weight: 500;
+cursor: pointer;
+display: none;
+font-size: 1.1rem;
+transition: all .2s ease-in-out;
+}
+#projectDescriptionClose:hover {
+  background-color: var(--white);
+  color: var(--light-blue);
 }
 .project-card__description {
   color: var(--white);
@@ -466,8 +483,22 @@ border-radius: 10px;
   text-align: left;
   margin-top: 20px;
   line-height: 1.4;
-  max-height: 160px;
+  max-height: 30px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+.project-card__description-more {
+ color: var(--white);
+ padding-top: 5px;
+ font-size: 1.2rem;
+ font-weight: 500;
+ cursor: pointer;
+}
+.project-card__description-more:hover {
+  color: var(--light-blue);
 }
 .project-card__footer {
   display: flex;
