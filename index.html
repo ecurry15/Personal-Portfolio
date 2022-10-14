@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main-wrapper">
     <section class="home">
       <header class="main-nav">
         <nav class="main-nav__social-icons-container">
@@ -48,6 +47,7 @@
           </a>
 
         </nav>
+
       </header>
       <div class="home__main-content">
         <div class="home__main-content-left">
@@ -61,7 +61,7 @@
               />
               </g>
               <defs>
-              <filter id="filter0_d_124_14" x="0" y="0" width="280" height="312" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <filter id="filter0_d_124_14" x="0" y="0"  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
               <feFlood flood-opacity="0" result="BackgroundImageFix"/>
               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
               <feOffset dx="1" dy="1"/>
@@ -78,6 +78,10 @@
             <p>A <span class="developer-text">Web Developer</span></p>
             <p>Based in California, USA</p>
           </div>
+          <div class="home__doMoreButtons">
+            <a class="doMoreButton one" href="projects.html">View Projects</a>
+            <a class="doMoreButton two" href="about.html">More About Me</a>
+            </div>
           <div class="left__skills">
             <h2>Skills</h2>
             <div class="skills-icons">
@@ -107,7 +111,7 @@
         </div>
         <div class="home__main-content-right">
           <div class="home__right-img-container">
-            <img src="assets/portfolio-IMG-condensed-removebg 1.png" alt="Image of Edward">
+            <img src="assets/portfolio-IMG-condensed-removebg 1.png" alt="Image of Edward" id="homeImg">
             <svg class="home__picture-circle" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 503 522" fill="none">
               <ellipse cx="251.5" cy="261" rx="251.5" ry="261" fill="url(#paint0_linear_124_15)"/>
               <defs>
@@ -139,64 +143,11 @@
 
         </div>
       </div>
-    </section>
-    <section class="projects">
-      <div class="projects__main">
-        <h2 class="projects__title">My work</h2>
-        <h2 class="projects__sub-title">A few of my latest projects</h2>
-        <div class="portfolio">
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/kia-page.png" alt="">
-            <p>Kia Car-builder Replica</p>
-          </a>
-
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/portfolioImg.png" alt="">
-            <p>My portfolio</p>
-          </a>
-
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/bankEmail.png" alt="">
-            <p>Bank Email</p>
-          </a>
-
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/transactionalEmail.png" alt="">
-            <p>Transactional Email</p>
-          </a>
-
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/promotionalEmail.png" alt="">
-            <p>Promotional Email</p>
-          </a>
-
-          <!--portfolio item 1-->
-          <a href="#" class="portfolio__item">
-            <img class="portfolio__img" src="assets/bookLibrary.png" alt="">
-            <p>Book Library</p>
-          </a>
-        </div>
-        <a class="veiwMore" href="#">View All</a>
-      </div>
-
-    </section>
-    <section class="aboutMe">
-      <div class="about__main">
-        <div class="about__left">
-          <h2 class="about__title">More About Me</h2>
-        </div>
-      </div>
 
     </section>
 
-  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/kute.js/dist/kute.min.js"></script>
-<script src="script.js"></script>
+<script src="homeScript.js"></script>
 <script src="https://kit.fontawesome.com/0889b6791b.js" crossorigin="anonymous"></script>
 </html>
