@@ -27,22 +27,53 @@ function () {
 
 const projectImgContainer = document.getElementById('projectImgConatiner');
 const projectDescription = document.getElementById('projectDescription');
-const descriptionViewMore = document.getElementById('descriptionViewMore');
-const projectDescriptionClose = document.getElementById('projectDescriptionClose');
+const descriptionViewMore = document.querySelectorAll('.project-card__description-more');
+const projectDescriptionClose = document.querySelectorAll('.projectDescriptionClose');
 
-descriptionViewMore.addEventListener('pointerdown', function() {
-  projectImgContainer.style.height = "38%";
-  projectDescription.style.maxHeight = "170px";
-  projectDescription.style.whiteSpace = "normal";
-  projectDescriptionClose.style.display = "block";
-  descriptionViewMore.style.display = "none";
-  projectDescriptionClose.style.display = "block";
+const expandDescription = (card) => {
+document.querySelector(`.project-card__img-container.${card}`).style.height = "38%";
+document.querySelector(`.project-card__description.${card}`).style.maxHeight = "170px";
+document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "normal";
+document.querySelector(`.projectDescriptionClose.${card}`).style.display = "block";
+document.querySelector(`.project-card__description-more.${card}`).style.display = "none";
+};
+const closeDescription = (card) => {
+  document.querySelector(`.project-card__img-container.${card}`).style.height = "50%";
+  document.querySelector(`.project-card__description.${card}`).style.maxHeight = "30px";
+  document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "nowrap";
+  document.querySelector(`.projectDescriptionClose.${card}`).style.display = "none";
+  document.querySelector(`.project-card__description-more.${card}`).style.display = "block";
+  };
+  
+
+
+descriptionViewMore.forEach(e => {
+e.addEventListener('pointerdown', function() {
+  if (e.classList.contains('one')) {
+    expandDescription("one");
+  } else if (e.classList.contains('two')) {
+    expandDescription("two");
+  } else if (e.classList.contains('three')) {
+    expandDescription("three");
+  } else if (e.classList.contains('four')) {
+    expandDescription("four");
+  }
 });
-projectDescriptionClose.addEventListener('pointerdown', function() {
-  descriptionViewMore.style.display = "block";
-  projectImgContainer.style.height = "50%";
-  projectDescription.style.maxHeight = "30px";
-  projectDescription.style.whiteSpace = "nowrap";
-  projectDescriptionClose.style.display = "none";
-});
+})
+
+
+projectDescriptionClose.forEach(e => {
+  e.addEventListener('pointerdown', function() {
+    if (e.classList.contains('one')) {
+      closeDescription("one");
+    } else if (e.classList.contains('two')) {
+      closeDescription("two");
+    } else if (e.classList.contains('three')) {
+      closeDescription("three");
+    } else if (e.classList.contains('four')) {
+      closeDescription("four");
+    }
+  });
+})
+
 
