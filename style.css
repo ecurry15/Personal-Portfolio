@@ -321,8 +321,6 @@ border-bottom: 4px solid var(--light-blue);
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
-  top: auto;
-  bottom: 0;
 }
 .home__right-img-container:hover > img {
 transform: scale(1.04);
@@ -412,6 +410,7 @@ transform: scale(1.04);
 }
 .projects-container::-webkit-scrollbar-track {
   cursor: pointer;
+  background-color: #f7f6f6;
 }
 
 .project-card {
@@ -549,16 +548,18 @@ transition: all .2s ease-in-out;
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .about__main {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row;
   padding-top: 100px;
   position: relative;
 }
 .about__main-left {
-position: absolute;
+  position: absolute;
 width: 1000px;
 height: calc(100% - 100px);
 padding-left: 150px;
@@ -592,11 +593,11 @@ justify-content: left;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: all .4s ease-out;
+  transition: all .3s ease-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .about__card:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .about__card-name {
@@ -647,14 +648,43 @@ justify-content: left;
   width: 240px;
 }
 .about__main-right {
-  position: absolute;
-height: calc(100% - 100px);
-padding-left: 150px;
-padding-top: 100px;
-display: flex;
-flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
+.about__img-container {
+  width: 495px;
+  height: 405px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+.about__img-container:hover .about__img {
+transform: scale(1.03);
+transform: translateY(-10px);
+}
+.about__img-container:hover .about__blue-svg {
+  transform: scale(.98);
+  }
+.about__img {
+  z-index: 5;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  animation: img-load var(--load-time) ease-in;
+}
+.about__blue-svg {
+  position: absolute;
+  width: 512px;
+  height: 409px;
+  left: -35px;
+  top: -40px;
+  transition: all .4s ease-in-out;
+}
 
 /* ANIMATIONS ---- */
 @keyframes nav-load {
