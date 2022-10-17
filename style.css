@@ -71,8 +71,12 @@ body {
   position: absolute;
   background-color: var(--light-blue);
   bottom: -45px;
-  width: 100px;
-  padding: 10px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0;
   font-size: 1.1rem;
   border-radius: 10px;
   z-index: 5;
@@ -330,6 +334,7 @@ transform: scale(1.04);
   width: 100%;
   transition: all .2s ease-in-out;
   animation: img-load var(--load-time) ease-in;
+  margin-top: auto;
 }
 .home__picture-circle {
   width: 533px;
@@ -522,7 +527,7 @@ transition: all .2s ease-in-out;
 }
 .projects__view-all {
   position: absolute;
-  width: 200px;
+  width: 100%;
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -533,6 +538,7 @@ transition: all .2s ease-in-out;
   font-size: 1.2rem;
   padding-top: 25px;
   display: flex;
+  justify-content: center;
   align-items: center;
   transition: all .2s ease-in-out;
 }
@@ -756,4 +762,149 @@ transform: translateY(-10px);
     height: 332px;
   }
   
+}
+@media screen and (max-width: 1440px) {
+  .hero__hello {
+    font-size: 4.2rem;
+    padding-left: 5px;
+  }
+  .hero__name {
+    font-size: 7.2rem;
+  }
+  .hero__description {
+    padding-left: 5px;
+    font-size: 1.65rem;
+  }
+  .name-svg {
+    width: 280px;
+    height: 312px;
+  }
+    .doMoreButton {
+      font-size: 1.3rem;
+    }
+    .home__right-img-container {
+      width: 39vw;
+      height: calc(39vw + 63px);
+    }
+    .home__picture-circle {
+      width: calc(39vw - 18px);
+      height: calc(39vw + 1px);
+      top: 70px;
+    }
+    .picture-svg {
+      width: calc(39vw - 33px);
+      height: calc(39vw - 169px);
+      top: 20px;
+    }
+    .about__h2 {
+      font-size: 2.55rem;
+    }
+    .about__svg {
+      width: 291px;
+      height: 341px;
+    }
+    .about__card {
+      height: 550px;
+      width: 555px;
+    }
+    
+    .about__card-name {
+      font-size: 1.4rem;
+    }
+    .about__card-text {
+      font-size: 1.3rem;
+    }
+    .about__card-sub-text {
+      font-size: 1.3rem;
+    }
+    .about__card-footer {
+      font-size: 1rem;
+    }
+    .contact-btn {
+      padding: 15px 0;
+      width: 200px;
+    }
+    .contact-btn:hover {
+      width: 220px;
+    }
+    .about__img-container {
+      width: 445px;
+      height: 355px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .about__img {
+      z-index: 5;
+      width: 100%;
+      transition: all .2s ease-in-out;
+      animation: img-load var(--load-time) ease-in;
+    }
+    .about__blue-svg {
+      position: absolute;
+      width: 462px;
+      height: 359px;
+      left: -35px;
+      top: -40px;
+      transition: all .4s ease-in-out;
+    }
+}
+@media screen and (max-width: 1300px) {
+  .main-nav__social-icons-container {
+    padding-left: 100px;
+  }
+  .home__main-content-left {
+    padding-left: 95px;
+  }
+  .home__right-img-container {
+    width: clamp(470px, 40vw, 700px);
+    height: clamp(533px,calc(40vw + 63px), 700px);
+  }
+  .home__picture-circle {
+    width: clamp(452px,calc(40vw - 18px), 700px);
+    height: clamp(471px,calc(40vw + 1px), 700px);
+    top: 70px;
+  }
+  .picture-svg {
+    width: clamp(437px,calc(40vw - 33px), 700px);
+    height: clamp(301px,calc(40vw - 169px), 700px);
+    top: 40px;
+  }
+  .hero__hello {
+    font-size: calc(3rem + 1vw);
+    padding-left: 5px;
+  }
+  .hero__name {
+    font-size: calc(6rem + 1vw);
+  }
+  .hero__description {
+    padding-left: 5px;
+    font-size: 1.45rem;
+  }
+  .name-svg {
+    width: 250px;
+    height: 282px;
+    right: 300px;
+  }
+  .doMoreButton {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .hero__hello {
+    font-size: calc(2.7rem + 1vw);
+    padding-left: 5px;
+  }
+  .hero__name {
+    font-size: calc(5.7rem + 1vw);
+  }
+  .hero__description {
+    padding-left: 5px;
+    font-size: 1.25rem;
+  }
+  .doMoreButton {
+    font-size: 1.1rem;
+  }
 }
