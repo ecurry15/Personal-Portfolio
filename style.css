@@ -138,8 +138,6 @@ color: var(--light-blue);
   margin-top: 200px;
   position: relative;
 }
-
-
 .home__main-content-left {
   width: 830px;
   height: 100%;
@@ -259,56 +257,6 @@ color: var(--light-blue);
     padding: 20px 45px;
   }
 
-
-.left__skills {
-  bottom: 0;
-  padding-bottom: 25px;
-  margin-top: auto;
-  padding-left: 5px;
-  width: 60%;
-  animation: hero-load var(--load-time) ease-in;
-  display: none;
-}
-.left__skills > h2 {
-font-size: 2.7rem;
-font-weight: 500;
-padding: 5px 0;
-width: 24%;
-border-bottom: 4px solid var(--light-blue);
-}
-.skills-icons {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-.icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--dark-blue);
-  padding-top: 15px;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-}
-.icon > span {
-  padding-top: 5px;
-}
-.icon:hover {
-  transform: scale(1.05);
-}
-.icon:hover > i {
-  color: var(--light-blue);
-}
-.icon > i {
-  font-size: 3rem;
-  color: var(--dark-blue);
-}
-.javascript-title {
-  font-size: .95rem !important;
-}
 .home__main-content-right {
   height: 100%;
   margin-left: auto;
@@ -325,6 +273,21 @@ border-bottom: 4px solid var(--light-blue);
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+}
+.home__right-img-container::after{
+  box-shadow: inset -5px -3px 4px 0 #E7E7E7;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  transition: all .2s ease-in-out;
+  animation: home-img-box-shadow-load var(--load-time) ease-in;
+}
+.home__right-img-container:hover::after{
+ transform: scale(1.041);
 }
 .home__right-img-container:hover > img {
 transform: scale(1.04);
@@ -713,6 +676,17 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
+@keyframes home-img-box-shadow-load {
+  0% {
+    box-shadow: none;
+  }
+  90% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: inset -5px -3px 4px 0 #E7E7E7;
+  }
+}
 @keyframes hero-load {
   0% {
     transform: translatex(-100%);
@@ -981,4 +955,119 @@ transform: translateY(-10px);
     left: -10px;
     top: -20px;
   }
+}
+@media screen and (max-width: 1076px) {
+  .home__main-content-left {
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+    padding-left: 0px;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero__hello {
+    font-size: 3.2rem;
+    padding-bottom: 8px;
+    padding-left: 0px;
+    width:100%;
+  }
+  .hero__name {
+    font-size: 5.7rem;
+    text-align: center;
+    width: 100%
+  }
+  .hero__description {
+    padding-top: 12px;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+  }
+  .name-svg {
+    width: 280px;
+    height: 312px;
+    top: -60px;
+    right: -50px;
+  }
+  .home__main-content-right {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .home__right-img-container {
+    position: relative;
+    width: 461px;
+    height: 524px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .home__picture-circle {
+    width: 453px;
+    height: 472px;
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+  }
+  .picture-svg {
+    display: none;
+  }
+  .home__doMoreButtons {
+      gap: 50px;
+    padding-bottom: 25px;
+    z-index: 10;
+    }
+    .doMoreButton {
+      font-size: 1.3rem;
+      padding: 20px 30px;
+    }
+    .doMoreButton.one:hover {
+      padding: 20px 35px;
+    }
+    .doMoreButton.two:hover {
+      padding: 20px 35px;
+    }
+    .main-nav__social-icons-container {
+      padding-left: 45px;
+    }
+    .social-icon {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border-radius: 20px;
+    }
+    .social-icon:hover > span {
+      font-size: .9rem;
+      padding: 0 8px;
+    }
+    
+    .social-icon-img {
+      width: 40px;
+      height: 40px;
+    }
+    .main-nav__sections-container {
+      padding-right: 35px;
+      gap: 8px;
+    }
+    .main-nav__section {
+      font-size: 1.4rem;
+    }
+    .projects-svg {
+      position: absolute;
+      top: -40px;
+      margin-left: 0;
+      width: 377px;
+      height: 313px;
+      fill: var(--white);
+    }
 }
