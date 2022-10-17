@@ -807,7 +807,6 @@ transform: translateY(-10px);
       height: 550px;
       width: 555px;
     }
-    
     .about__card-name {
       font-size: 1.4rem;
     }
@@ -830,25 +829,10 @@ transform: translateY(-10px);
     .about__img-container {
       width: 445px;
       height: 355px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .about__img {
-      z-index: 5;
-      width: 100%;
-      transition: all .2s ease-in-out;
-      animation: img-load var(--load-time) ease-in;
     }
     .about__blue-svg {
-      position: absolute;
       width: 462px;
       height: 359px;
-      left: -35px;
-      top: -40px;
-      transition: all .4s ease-in-out;
     }
 }
 @media screen and (max-width: 1300px) {
@@ -891,6 +875,54 @@ transform: translateY(-10px);
   .doMoreButton {
     font-size: 1.2rem;
   }
+  .projects__main-content {
+    padding-left: 100px;
+  }
+  .about__main-left {
+  padding-left: 100px;
+  }
+  .about__h2 {
+    font-size: 2.4rem;
+  }
+  .about__svg {
+    width: 281px;
+    height: 331px;
+    margin-left: 150px;
+  }
+  .about__card {
+    height: 550px;
+    width: 525px;
+  }
+  .about__card-name {
+    font-size: 1.3rem;
+  }
+  .about__card-text {
+    font-size: 1.15rem;
+  }
+  .about__card-sub-text {
+    font-size: 1.15rem;
+  }
+  .about__card-footer {
+    font-size: 1rem;
+  }
+  .contact-btn {
+    padding: 15px 0;
+    width: 190px;
+    font-size: 1.35rem;
+  }
+  .contact-btn:hover {
+    width: 210px;
+  }
+  .about__img-container {
+    width: 435px;
+    height: 345px;
+  }
+  .about__blue-svg {
+    width: 432px;
+    height: 329px;
+    left: -15px;
+    top: -20px;
+  }
 }
 @media screen and (max-width: 1160px) {
   .hero__hello {
@@ -906,5 +938,47 @@ transform: translateY(-10px);
   }
   .doMoreButton {
     font-size: 1.1rem;
+  }
+  .about__h2 {
+    font-size: 2.3rem;
+  }
+  .about__svg {
+    width: 271px;
+    height: 321px;
+    margin-left: 130px;
+  }
+  .about__card {
+    height: 550px;
+    width: 515px;
+  }
+  .about__card-name {
+    font-size: 1.3rem;
+  }
+  .about__card-text {
+    font-size: 1.15rem;
+  }
+  .about__card-sub-text {
+    font-size: 1.15rem;
+  }
+  .about__card-footer {
+    font-size: 1rem;
+  }
+  .contact-btn {
+    padding: 15px 0;
+    width: 190px;
+    font-size: 1.35rem;
+  }
+  .contact-btn:hover {
+    width: 210px;
+  }
+  .about__img-container {
+    width: 415px;
+    height: 325px;
+  }
+  .about__blue-svg {
+    width: 412px;
+    height: 309px;
+    left: -10px;
+    top: -20px;
   }
 }
