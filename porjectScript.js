@@ -23,8 +23,6 @@ function () {
 }
 
 
-
-
 const projectImgContainer = document.getElementById('projectImgConatiner');
 const projectDescription = document.getElementById('projectDescription');
 const descriptionViewMore = document.querySelectorAll('.project-card__description-more');
@@ -45,8 +43,6 @@ const closeDescription = (card) => {
   document.querySelector(`.project-card__description-more.${card}`).style.display = "block";
   };
   
-
-
 descriptionViewMore.forEach(e => {
 e.addEventListener('pointerdown', function() {
   if (e.classList.contains('one')) {
@@ -61,7 +57,6 @@ e.addEventListener('pointerdown', function() {
 });
 })
 
-
 projectDescriptionClose.forEach(e => {
   e.addEventListener('pointerdown', function() {
     if (e.classList.contains('one')) {
@@ -75,6 +70,9 @@ projectDescriptionClose.forEach(e => {
     }
   });
 })
+
+const projectCard = document.querySelectorAll('.project-card');
+
 
 
 /* --- Morphing animation -- */
