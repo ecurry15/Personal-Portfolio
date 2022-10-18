@@ -685,7 +685,7 @@ transform: translateY(-10px);
   0% {
     box-shadow: none;
   }
-  90% {
+  99% {
     box-shadow: none;
   }
   100% {
@@ -1154,9 +1154,23 @@ transform: translateY(-10px);
   position: absolute;
   width: 382px;
   height: 279px;
-  left: 60px;
+  left: 50px;
   top: 50px;
   transform: rotate(110deg);
   fill: white;
 }
+.about__smaller-screen-svg-two {
+  transform: rotate(180deg);
+}
+}
+@media screen and (max-width: 915px) {
+  .about__smaller-screen-svg {
+    display: block;
+    position: absolute;
+    width: 372px;
+    height: 269px;
+    left: 10px;
+    top: 70px;
+    transform: rotate(110deg);
+  }
 }
