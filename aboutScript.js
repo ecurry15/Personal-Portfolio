@@ -22,6 +22,21 @@ function () {
   }, 2000)
 }
 
+const navBarIcon = document.querySelector('.fa-bars');
+const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
+const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
+navBarIcon.addEventListener('pointerdown', function() {
+  navBarExtentedMenu.style.display = "flex";
+  navBarExtentedMenu.style.height = "300px";
+  navBarExtentedMenu.style.padding = "20px 20px 0px";
+  navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
+  navBarIcon.style.color = "#175887";
+  extendedMenuSection.forEach(section => {
+    section.style.fontSize = "1.9rem";
+  })
+})
+
+
 
 
 /* --- Morphing animation -- */
