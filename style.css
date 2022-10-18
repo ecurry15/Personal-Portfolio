@@ -1127,6 +1127,10 @@ transform: translateY(-10px);
       width: 377px;
       height: 313px;
     }
+    .about {
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
     .about__main-left {
     padding-left: 0px;
     padding-top: 60px;
@@ -1218,6 +1222,10 @@ transform: translateY(-10px);
 }
 }
 @media screen and (max-width: 915px) {
+  .about {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
   .about__smaller-screen-svg {
     display: block;
     position: absolute;
@@ -1346,6 +1354,10 @@ transform: translateY(-10px);
     }
     .projects__view-all:hover > i {
       padding-left: 15px;
+    }
+    .about {
+      overflow-x: hidden;
+      overflow-y: scroll;
     }
     .about__card {
       height: 550px;
@@ -1479,5 +1491,44 @@ transform: translateY(-10px);
     }
     .projects__view-all:hover > i {
       padding-left: 15px;
+    }
+    .about__card {
+      height: 600px;
+      width: 400px;
+    }
+    .about__card-name {
+      font-size: 1.4rem;
+    }
+    .about__card-text {
+      font-size: 1.15rem;
+    }
+    .about__card-sub-text {
+      font-size: 1.15rem;
+    }
+    .about__card-footer {
+      font-size: 1.2rem;
+    }
+    .contact-btn {
+      padding: 15px 0;
+      width: 190px;
+      font-size: 1.35rem;
+    }
+    .contact-btn:hover {
+      width: 210px;
+    }
+    .about__smaller-screen-svg {
+      display: block;
+      position: absolute;
+      width: 362px;
+      height: 259px;
+      left: -80px;
+      top: 70px;
+      transform: rotate(110deg);
+    }
+    .about__blue-svg {
+      right: -150px;
+      top: 70px;
+      width: 362px;
+      height: 259px;
     }
 }
