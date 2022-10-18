@@ -28,7 +28,7 @@ const extendedMenuSection = document.querySelectorAll('.extended-menu__section')
 const extendedMenuClose = document.querySelector('.fa-xmark');
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
-  navBarExtentedMenu.style.height = "300px";
+  navBarExtentedMenu.style.height = "250px";
   navBarExtentedMenu.style.padding = "20px 20px 0px";
   navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
   navBarExtentedMenu.style.borderTop = "1px solid #fff";

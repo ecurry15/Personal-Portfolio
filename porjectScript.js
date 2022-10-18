@@ -30,8 +30,9 @@ const projectDescriptionClose = document.querySelectorAll('.projectDescriptionCl
 
 const expandDescription = (card) => {
 document.querySelector(`.project-card__img-container.${card}`).style.height = "38%";
-document.querySelector(`.project-card__description.${card}`).style.maxHeight = "170px";
+document.querySelector(`.project-card__description.${card}`).style.maxHeight = "145px";
 document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "normal";
+document.querySelector(`.project-card__description.${card}`).style.overFlowX = "scroll";
 document.querySelector(`.projectDescriptionClose.${card}`).style.display = "block";
 document.querySelector(`.project-card__description-more.${card}`).style.display = "none";
 };
@@ -77,16 +78,32 @@ const projectCard = document.querySelectorAll('.project-card');
 const navBarIcon = document.querySelector('.fa-bars');
 const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
 const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
+const extendedMenuClose = document.querySelector('.fa-xmark');
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
-  navBarExtentedMenu.style.height = "300px";
+  navBarExtentedMenu.style.height = "250px";
   navBarExtentedMenu.style.padding = "20px 20px 0px";
   navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
-  navBarIcon.style.color = "#175887";
+  navBarExtentedMenu.style.borderTop = "1px solid #fff";
+  navBarIcon.style.fontSize = "0px";
+  extendedMenuClose.style.fontSize = "2rem";
   extendedMenuSection.forEach(section => {
     section.style.fontSize = "1.9rem";
   })
 })
+extendedMenuClose.addEventListener('pointerdown', function() {
+  navBarExtentedMenu.style.height = "0px";
+  navBarExtentedMenu.style.padding = "0px 20px 0px";
+  navBarExtentedMenu.style.boxShadow = "none";
+  navBarExtentedMenu.style.borderTop = "none";
+  navBarIcon.style.fontSize = "1.9rem";
+  extendedMenuClose.style.fontSize = "0px";
+  extendedMenuSection.forEach(section => {
+    section.style.fontSize = "0px";
+  })
+})
+
+
 
 
 

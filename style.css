@@ -495,15 +495,25 @@ transition: all .2s ease-in-out;
   font-size: 1.25rem;
   width: 85%;
   text-align: left;
-  margin-top: 20px;
+  margin-top: 25px;
   line-height: 1.4;
   max-height: 30px;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   text-overflow: ellipsis;
   position: relative;
   transition: all .3s ease-in-out;
 }
+.project-card__description::-webkit-scrollbar {
+ width: 6px;
+  cursor: pointer;
+ }
+ .project-card__description::-webkit-scrollbar-thumb {
+   background-color: var(--light-blue);
+   border-radius: 4px;
+   cursor: pointer;
+ }
 .project-card__description-more {
  color: var(--white);
  padding-top: 5px;
@@ -1313,6 +1323,8 @@ transform: translateY(-10px);
     }
     .project-card__description {
       font-size: 1.2rem;
+      overflow-x: hidden;
+  overflow-y: scroll;
     }
     .project-card__description-more {
      font-size: 1.15rem;
@@ -1420,5 +1432,52 @@ transform: translateY(-10px);
     .doMoreButton {
       font-size: 1rem;
       padding: 20px 25px;
+    }
+    .projects-container {
+      margin-top: 0px;
+      gap: 10px;
+    }
+    .projects-svg {
+      top: 0px;
+      width: 397px;
+      height: 333px;
+    }
+    .project-card {
+      width: 400px;
+      height: 520px;
+      margin: auto 10px;
+    }
+    .project-card__title {
+      color: var(--white);
+      width: 85%;
+      margin-top: 30px;
+      font-size: 1.3rem;
+    }
+    .project-card__img-container {
+    margin-top: 20px;
+    }
+    .project-card__description {
+      font-size: 1.1rem;
+    }
+    .project-card__description-more {
+     font-size: 1.1rem;
+    }
+    .project-card__description-more:hover {
+      color: var(--light-blue);
+    }
+    .project-card__footer {
+      gap: 20px;
+      font-size: 1.2rem;
+    }
+    .projects__view-all {
+      font-size: 1.35rem;
+    }
+    .projects__view-all > i {
+      padding-left: 10px;
+      font-size: 1.1rem;
+      transition: all .2s ease-in-out;
+    }
+    .projects__view-all:hover > i {
+      padding-left: 15px;
     }
 }
