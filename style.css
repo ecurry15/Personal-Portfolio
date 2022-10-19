@@ -117,6 +117,7 @@ background-color: var(--light-blue);
   display: none;
   font-size: 0px;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 .fa-xmark {
   font-size: 0rem;
@@ -124,7 +125,8 @@ background-color: var(--light-blue);
   color: var(--light-blue);
   right: 0;
   padding-right: 20px;
-  transition: all .3s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
 }
 
 .main-nav__sections-container {
@@ -409,7 +411,7 @@ transform: scale(1.04);
   position: absolute;
   top: -20px;
   margin-left: 0;
-  width: 417px;
+  width: 397px;
   height: 353px;
   fill: var(--white);
 }
@@ -1451,6 +1453,7 @@ transform: translateY(-10px);
     .projects-container {
       margin-top: 0px;
       gap: 10px;
+      height: 580px;
     }
     .projects-svg {
       top: 0px;
@@ -1533,5 +1536,106 @@ transform: translateY(-10px);
       top: 70px;
       width: 362px;
       height: 259px;
+    }
+}
+@media screen and (max-width: 436px) {
+  .hero__hello {
+    font-size: 2.3rem;
+  }
+  .hero__name {
+    font-size: 4rem;
+  }
+  .hero__description {
+    padding-top: 12px;
+    font-size: 1.1rem;
+  }
+  .name-svg {
+    width: 210px;
+    height: 242px;
+    top: -35px;
+    right: -40px;
+  }
+  .home__right-img-container {
+    width: 301px;
+    height: 364px;
+  }
+  .home__picture-circle {
+    width: 293px;
+    height: 312px;
+  }
+  .home__right-img-container::after{
+    box-shadow: inset -1px -3px 4px 0 #E7E7E7;
+  }
+  .home__doMoreButtons {
+      gap: 30px;
+    padding-bottom: 25px;
+    z-index: 10;
+    }
+    .doMoreButton {
+      font-size: 1rem;
+      padding: 15px 10px;
+      text-align: center;
+    }
+    .doMoreButton:hover {
+      padding: 15px 10px;
+    }
+    .projects-container {
+      height: 550px;
+    }
+    .projects__title {
+      font-size: 1.75rem;
+    }
+    .projects-svg {
+      top: 0px;
+      width: 307px;
+      height: 243px;
+    }
+    .project-card {
+      width: 280px;
+      height: 480px;
+      margin: auto 10px;
+    }
+    .project-card__title {
+      color: var(--white);
+      width: 85%;
+      margin-top: 30px;
+      font-size: 1rem;
+    }
+    .project-card__img-container {
+    margin-top: 20px;
+    }
+    .project-card__language {
+      font-size: .8rem;
+    }
+    .project-card__description {
+      font-size: .9rem;
+      margin-top: 10px;
+    }
+    #projectDescriptionClose {
+      top: 0;
+      right: 0;
+      padding: 2px 4px;
+      font-size: .8rem;
+      }
+    .project-card__description-more {
+     font-size: .9rem;
+    }
+    .project-card__description-more:hover {
+      color: var(--light-blue);
+    }
+    .project-card__footer {
+      gap: 20px;
+      font-size: .9rem;
+    }
+    .projects__view-all {
+      font-size: 1.35rem;
+    }
+    .projects__view-all > i {
+      padding-left: 10px;
+      font-size: 1.1rem;
+      transition: all .2s ease-in-out;
+    }
+    .projects__view-all:hover > i {
+      padding-left: 15px;
     }
 }
