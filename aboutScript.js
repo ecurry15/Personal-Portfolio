@@ -29,14 +29,17 @@ const extendedMenuClose = document.querySelector('.fa-xmark');
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
   navBarExtentedMenu.style.height = "250px";
-  navBarExtentedMenu.style.padding = "20px 20px 0px";
+  navBarExtentedMenu.style.padding = "15px 20px 0px";
   navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
   navBarExtentedMenu.style.borderTop = "1px solid #fff";
   navBarIcon.style.fontSize = "0px";
   extendedMenuClose.style.fontSize = "2rem";
-  extendedMenuSection.forEach(section => {
-    section.style.fontSize = "1.9rem";
-  })
+  setTimeout(() => {
+    extendedMenuSection.forEach(section => {
+      section.style.fontSize = "1.9rem";
+      section.style.display = "flex";
+    })
+  }, 250);
 })
 extendedMenuClose.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.height = "0px";
@@ -47,6 +50,7 @@ extendedMenuClose.addEventListener('pointerdown', function() {
   extendedMenuClose.style.fontSize = "0px";
   extendedMenuSection.forEach(section => {
     section.style.fontSize = "0px";
+    section.style.display = "none";
   })
 })
 
