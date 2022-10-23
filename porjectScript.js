@@ -30,7 +30,7 @@ const projectDescriptionClose = document.querySelectorAll('.projectDescriptionCl
 
 const expandDescription = (card) => {
 document.querySelector(`.project-card__img-container.${card}`).style.height = "38%";
-document.querySelector(`.project-card__description.${card}`).style.maxHeight = "145px";
+document.querySelector(`.project-card__description.${card}`).style.maxHeight = "130px";
 document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "normal";
 document.querySelector(`.project-card__description.${card}`).style.overFlowX = "scroll";
 document.querySelector(`.projectDescriptionClose.${card}`).style.display = "block";
