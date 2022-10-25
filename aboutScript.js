@@ -26,6 +26,8 @@ const navBarIcon = document.querySelector('.fa-bars');
 const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
 const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
 const extendedMenuClose = document.querySelector('.fa-xmark');
+const isSmallMobile = window.matchMedia('(max-height: 580px)');
+
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
   navBarExtentedMenu.style.height = "250px";
@@ -33,7 +35,11 @@ navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
   navBarExtentedMenu.style.borderTop = "1px solid #fff";
   navBarIcon.style.fontSize = "0px";
-  extendedMenuClose.style.fontSize = "2rem";
+  if (isSmallMobile.matches == false) {
+    extendedMenuClose.style.fontSize = "2rem";
+  } else {
+    extendedMenuClose.style.fontSize = "1.5rem";
+  }
   setTimeout(() => {
     extendedMenuSection.forEach(section => {
       section.style.fontSize = "1.9rem";
@@ -46,14 +52,17 @@ extendedMenuClose.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.padding = "0px 20px 0px";
   navBarExtentedMenu.style.boxShadow = "none";
   navBarExtentedMenu.style.borderTop = "none";
-  navBarIcon.style.fontSize = "1.9rem";
+  if (isSmallMobile.matches == false) {
+    navBarIcon.style.fontSize = "1.9rem";
+  } else {
+    navBarIcon.style.fontSize = "1.4rem";
+  }
   extendedMenuClose.style.fontSize = "0px";
   extendedMenuSection.forEach(section => {
     section.style.fontSize = "0px";
     section.style.display = "none";
   })
 })
-
 
 
 

@@ -21,6 +21,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  
 }
 .main-nav {
   width: 100%;
@@ -1219,10 +1220,10 @@ transform: translateY(-10px);
       padding: 20px 30px;
     }
     .doMoreButton.one:hover {
-      padding: 20px 35px;
+      padding: 20px 30px;
     }
     .doMoreButton.two:hover {
-      padding: 20px 35px;
+      padding: 20px 30px;
     }
     .main-nav__social-icons-container {
       padding-left: 45px;
@@ -1661,7 +1662,10 @@ transform: translateY(-10px);
       padding: 15px 10px;
       text-align: center;
     }
-    .doMoreButton:hover {
+    .doMoreButton.one:hover {
+      padding: 15px 10px;
+    }
+    .doMoreButton.two:hover {
       padding: 15px 10px;
     }
     .projects-container {
@@ -2658,7 +2662,143 @@ transform: translateY(-10px);
       padding: 15px 10px;
       text-align: center;
     }
-    .doMoreButton:hover {
+    .doMoreButton.one:hover {
       padding: 15px 10px;
+    }
+    .doMoreButton.two:hover {
+      padding: 15px 10px;
+    }
+}
+@media screen and (max-height: 580px) and (max-width: 1024px) {
+  .main-nav {
+    height: 50px;
+  }
+  .main-nav__social-icons-container {
+    gap: 5px;
+  }
+  .social-icon {
+    height: 25px;
+  }
+  .social-icon-img {
+    height: 25px;
+    width: 25px;
+  }
+  .main-nav__section {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  .nav-bar__extended-menu {
+   top: 50px;
+  }
+  .fa-bars {
+    font-size: 1.5rem;
+  }
+.home__main-content {
+  height: calc(100% - 80px);
+    margin-top: 80px;
+}
+  .hero__hello {
+    font-size: 1.6rem;
+    padding: 0 0 2px;
+  }
+  .hero__name {
+    font-size: 3rem;
+  }
+  .hero__description {
+    padding-top: 2px;
+    font-size: .8rem;
+  }
+  .name-svg {
+    width: 130px;
+    height: 172px;
+    top: -20px;
+  }
+  .home__right-img-container {
+    width: 241px;
+    height: 304px;
+  }
+  .home__picture-circle {
+    width: 233px;
+    height: 252px;
+  }
+  .home__right-img-container::after{
+    box-shadow: inset -1px -3px 4px 0 #E7E7E7;
+  }
+  .home__doMoreButtons {
+      gap: 15px;
+    padding-bottom: 25px;
+    z-index: 10;
+    }
+    .doMoreButton {
+      font-size: .8rem;
+      padding: 15px 10px;
+      text-align: center;
+    }
+    .doMoreButton.one:hover {
+      padding: 15px 10px;
+    }
+    .doMoreButton.two:hover {
+      padding: 15px 10px;
+    }
+    .projects__main-content {
+      height: calc(100% - 60px);
+    margin-top: 70px;
+    }
+    .projects__title {
+      font-size: 1.5rem;
+    }
+    .projects-container {
+      height: 490px;
+    }
+    .project-card {
+      height: 430px;
+    }
+    .project-card__title {
+      font-size: .85rem;
+      margin-top: 15px;
+    }
+    .project-card__img-container {
+      margin-top: 15px;
+    }
+    .project-card__language {
+      font-size: .7rem;
+    }
+    .project-card__description {
+      font-size: .8rem;
+    }
+    .project-card__description-more {
+      font-size: .8rem;
+    }
+    .about__main-left {
+      padding-top: 20px;
+    }
+    .about__h2 {
+      padding: 0 0 20px;
+      font-size: 1.5rem;
+    }
+    .about__card-name {
+      padding: 20px 0 15px;
+      font-size: 1rem;
+    }
+    .about__card-text {
+      font-size: .9rem;
+      padding: 0 0 10px;
+    }
+    .about__card-sub-text {
+      font-size: .9rem;
+      padding: 5px 0 20px;
+    }
+    .about__card-footer {
+      font-size: .85rem;
+      padding: 0 0 15px;
+    }
+    .contact-btn {
+      font-size: .85rem;
+      padding: 12px 0;
+      width: 180px;
+      margin: 20px 0 20px;
+    }
+    .contact-btn:hover{
+      width: 180px;
     }
 }
