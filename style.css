@@ -2174,6 +2174,104 @@ transform: translateY(-10px);
   transform: rotate(180deg);
 }
 }
+@media screen and (max-width: 1024px) and (min-height: 1200px) {
+  .home__main-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 300px);
+    margin-top: 300px;
+    position: relative;
+  }
+  .main-nav {
+    height: 115px;
+  }
+  .social-icon-img {
+    height: 50px;
+    width: 50px;
+  }
+  .main-nav__section {
+    font-size: 1.65rem;
+    padding: 12px 10px;
+  }
+  .hero__hello {
+    font-size: 3.8rem;
+  }
+  .hero__name {
+    font-size: 6.6rem;
+  }
+  .hero__description {
+    font-size: 1.6rem;
+  }
+  .name-svg {
+    width: 320px;
+    height: 352px;
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    left: auto;
+  }
+  .doMoreButton {
+    font-size: 1.5rem;
+    padding: 25px 30px;
+  }
+  .doMoreButton.one:hover {
+    padding: 25px 45px;
+  }
+  .doMoreButton.two:hover {
+    padding: 25px 45px;
+  }
+  .home__right-img-container {
+    width: 441px;
+    height: 504px;
+  }
+  .home__picture-circle {
+    width: 433px;
+    height: 452px;
+    position: absolute;
+    z-index: 2;
+    top: 75px;
+  }
+  .projects__main-content {
+    margin-top: 200px;
+    padding-left: 45px;
+  }
+  .projects__title {
+    font-size: 2.9rem;
+  }
+  .projects__view-all {
+    font-size: 1.6rem;
+    padding-top: 40px;
+  }
+  .projects__view-all > i {
+    font-size: 1.25rem;
+  }
+  .about__main {
+    padding-top: 180px;
+  }
+  .about__h2 {
+    padding-bottom: 50px;
+  }
+ .about__card {
+   height: 650px;
+ }
+ .about__blue-svg {
+  width: 412px;
+  height: 309px;
+  right: -60px;
+  top: -30px;
+}
+.about__smaller-screen-svg {
+  display: block;
+  position: absolute;
+  width: 422px;
+  height: 319px;
+  left: 50px;
+  top: 50px;
+  transform: rotate(110deg);
+  fill: white;
+}
+}
 @media screen and (max-width: 915px) and (min-height: 900px) {
   .about {
     overflow-x: hidden;
@@ -2669,6 +2767,9 @@ transform: translateY(-10px);
     .doMoreButton.two:hover {
       padding: 15px 10px;
     }
+   .about__main {
+     min-height: 740px;
+   }
 }
 @media screen and (max-height: 580px) and (max-width: 1024px) {
   .main-nav {
