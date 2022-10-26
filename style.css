@@ -9,11 +9,17 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: -webkit-fill-available;
+}
+
+
 body {
   font-family: 'DM Sans', sans-serif;
   display: flex;
   justify-content: center;
   background-color: #E7E7E7;
+  height: -webkit-fill-available;
 }
 
 .home {
