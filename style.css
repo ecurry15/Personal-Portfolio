@@ -27,7 +27,7 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  
+  height: -webkit-fill-available;
 }
 .main-nav {
   width: 100%;
