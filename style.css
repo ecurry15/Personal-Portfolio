@@ -732,13 +732,41 @@ transform: translateY(-10px);
   backdrop-filter: saturate(160%) blur(2px); 
 }
 .about__contact-modal {
-width: 600px;
+width: 550px;
 height: 600px;
-background-color: #E7E7E7;
+background-color: #fff;
 border-radius: 20px;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px
+;
 }
-
+.contact-modal__title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 35px 0;
+  color: var(--dark-blue);
+}
+.contact-modal__input-field {
+  width: 80%;
+  height: 60px;
+  background-color: #E7E7E7;
+  color: var(--dark-blue);
+  border: none;
+  border-radius: 5px;
+  padding: 0 15px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.contact-modal__input-field.message {
+  padding-top: 10px;
+  resize: vertical;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+}
 /* ANIMATIONS ---- */
 @keyframes nav-load {
   0% {
