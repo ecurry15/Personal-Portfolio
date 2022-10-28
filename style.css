@@ -725,15 +725,16 @@ transform: translateY(-10px);
   height: 100%;
   width: 100%;
   z-index: 200;
-  opacity: .7;
+  opacity: .85;
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: saturate(160%) blur(2px); 
 }
 .about__contact-modal {
-width: 500px;
+width: 600px;
 height: 600px;
-background-color: var(--white);
+background-color: #E7E7E7;
 border-radius: 20px;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
