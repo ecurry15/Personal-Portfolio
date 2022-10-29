@@ -726,9 +726,6 @@ transform: translateY(-10px);
   width: 100%;
   z-index: 200;
   opacity: .85;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   backdrop-filter: saturate(160%) blur(2px); 
 }
 .about__contact-modal {
@@ -741,7 +738,13 @@ transform: translateY(-10px);
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  position: relative;
+  position: absolute;
+  z-index: 300;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   }
   .contact-modal__title {
    font-size: 2rem;
