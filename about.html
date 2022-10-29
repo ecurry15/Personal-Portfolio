@@ -12,12 +12,12 @@
 <body>
   <div class="about__modal-background-blur"></div>
     <section class="about">
-        <form class="about__contact-modal">
-          <h2 class="contact-modal__title">Contact Me</h2>
-          <input type="text" class="contact-modal__input-field" placeholder="Name" required>
-          <input type="text" class="contact-modal__input-field" placeholder="Email" required>
-          <textarea name="" id="" cols="30" rows="10" class="contact-modal__input-field message" placeholder="Message" required></textarea>
-          <button class="contact-modal__btn" type="submit">Send</button>
+        <form class="about__contact-modal" data-contact-form>
+          <h2 class="contact-modal__title" data-contact-form>Contact Me</h2>
+          <input type="text" class="contact-modal__input-field" placeholder="Name" required data-contact-form>
+          <input type="text" class="contact-modal__input-field" placeholder="Email" required data-contact-form>
+          <textarea name="" id="" cols="30" rows="10" class="contact-modal__input-field message" placeholder="Message" required data-contact-form></textarea>
+          <button class="contact-modal__btn" type="submit" data-contact-form>Send</button>
           <div class="contact-model__close">
             X
           </div>
@@ -89,7 +89,7 @@
             </p>
             <p class="about__card-footer">Html- CSS- Javascript- Git- Node.js- Npm</p>
           </div>
-          <a class="contact-btn" href="#">Contact Me</a>
+          <a class="contact-btn" href="#" data-contact-form>Contact Me</a>
         <svg class="about__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 321 371" fill="none">
             <g filter="url(#filter0_d_56_70)">
             <path id="blob1" fill-rule="evenodd" clip-rule="evenodd" d="M311.567 153.58C328.799 211.237 285.388 254.266 254.238 294.207C235.419 318.337 204.649 317.308 176.585 326.654C138.429 339.361 100.677 389.909 65.6675 357.007C30.6756 324.12 73.057 269.687 64.8277 221.623C53.5026 155.478 -19.111 85.936 10.6375 35.6002C40.9924 -15.7616 118.136 10.3771 176.216 33.1478C231.204 54.7057 292.76 90.6519 311.567 153.58Z" fill="white"/>

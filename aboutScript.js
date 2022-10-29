@@ -64,6 +64,28 @@ extendedMenuClose.addEventListener('pointerdown', function() {
   })
 })
 
+const contactModalBackgroundBlur = document.querySelector('.about__modal-background-blur');
+const contactModal = document.querySelector('.about__contact-modal');
+const contactBtn = document.querySelector('.contact-btn');
+let contactBtnWasClicked = false;
+
+contactBtn.addEventListener('pointerdown', () => {
+contactBtnWasClicked = true;
+contactModalBackgroundBlur.style.display = "block";
+contactModal.style.display = "flex";
+});
+
+document.addEventListener('pointerdown', e => {
+  if (contactBtnWasClicked) {
+    const isContactModal = e.target.matches('[data-contact-form]');
+    if (!isContactModal) {
+      contactModalBackgroundBlur.style.display = "none";
+contactModal.style.display = "none";
+contactBtnWasClicked = false;
+    }
+  }
+});
+
 
 
 
