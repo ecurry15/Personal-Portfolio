@@ -822,6 +822,34 @@ transform: translateY(-10px);
    background-color: var(--dark-blue);
    color: var(--white);
   }
+  .about__contact-thankYou-message {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    z-index: 200;
+    width: 300px;
+    height: 120px;
+    border-radius: 10px;
+    color: var(--dark-blue);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: rgba(87, 87, 87, 0.19) 0px 2px 6px, rgba(114, 114, 114, 0.23) 0px 2px 2px;
+    animation: thankYou-message-fade-in 500ms forwards;
+  }
+  .about__contact-thankYou-message > h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 8px;
+  }
+  .about__contact-thankYou-message > p {
+    font-size: 1.1rem;
+  }
 /* ANIMATIONS ---- */
 @keyframes nav-load {
   0% {
@@ -882,6 +910,22 @@ transform: translateY(-10px);
   100% {
     transform: translatex(0);
     opacity: 1;
+  }
+}
+@keyframes thankYou-message-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes thankYou-message-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* ANIMATIONS END---- */

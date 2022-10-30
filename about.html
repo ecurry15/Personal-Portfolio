@@ -12,16 +12,20 @@
 <body>
   <div class="about__modal-background-blur"></div>
     <section class="about">
-        <form class="about__contact-modal" data-contact-form>
+        <form class="about__contact-modal" data-contact-form  action="https://formsubmit.co/your@email.com" method="POST">
           <h2 class="contact-modal__title" data-contact-form>Contact Me</h2>
-          <input type="text" class="contact-modal__input-field" placeholder="Name" required data-contact-form>
-          <input type="text" class="contact-modal__input-field" placeholder="Email" required data-contact-form>
-          <textarea name="" id="" cols="30" rows="10" class="contact-modal__input-field message" placeholder="Message" required data-contact-form></textarea>
+          <input type="text" class="contact-modal__input-field" name="name" placeholder="Name" required data-contact-form>
+          <input type="email" class="contact-modal__input-field" name="email" placeholder="Email" required data-contact-form>
+          <textarea name="message" cols="30" rows="10" class="contact-modal__input-field message" placeholder="Message" required data-contact-form></textarea>
           <button class="contact-modal__btn" type="submit" data-contact-form>Send</button>
           <div class="contact-model__close">
             X
           </div>
         </form>
+        <div class="about__contact-thankYou-message">
+          <h2>Thank you</h2>
+          <p>Your message has been sent.</p>
+        </div>
       <header class="main-nav" id="nav2">
         <nav class="main-nav__social-icons-container">
           <a href="https://github.com/ecurry15" target="_blank" class="social-icon">
