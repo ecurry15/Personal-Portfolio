@@ -86,6 +86,24 @@ contactBtnWasClicked = false;
   }
 });
 
+const contactSubmitBtn = document.querySelector('.contact-modal__btn');
+const aboutThankYouMessage = document.querySelector('.about__contact-thankYou-message');
+
+contactSubmitBtn.addEventListener('pointerdown', () => {
+  let formIsValid = contactModal.checkValidity();
+  if (!formIsValid) {
+    return
+  } else {
+    contactModalBackgroundBlur.style.display = "none";
+contactModal.style.display = "none";
+contactBtnWasClicked = false;
+aboutThankYouMessage.style.display = "flex";
+setTimeout(() => {
+  aboutThankYouMessage.style.display = "none";
+}, "4000")
+  }
+})
+
 
 
 

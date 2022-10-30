@@ -824,7 +824,8 @@ transform: translateY(-10px);
   }
   .about__contact-thankYou-message {
     position: absolute;
-    display: flex;
+    display: none;
+    opacity: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -840,7 +841,7 @@ transform: translateY(-10px);
     right: 0;
     margin: auto;
     box-shadow: rgba(87, 87, 87, 0.19) 0px 2px 6px, rgba(114, 114, 114, 0.23) 0px 2px 2px;
-    animation: thankYou-message-fade-in 500ms forwards;
+    animation: abd 2s forwards;
   }
   .about__contact-thankYou-message > h2 {
     font-size: 2rem;
@@ -912,21 +913,13 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes thankYou-message-fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes abd {
+0% {
+  opacity: 0;
 }
-@keyframes thankYou-message-fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+100% {
+  opacity: 1;
+}
 }
 /* ANIMATIONS END---- */
 
