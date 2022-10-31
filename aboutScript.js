@@ -104,7 +104,23 @@ setTimeout(() => {
   }
 })
 
+const sendMail = () => {
+  let params = {
+    name:document.getElementById('name').value,
+    email:document.getElementById('email').value,
+    message:document.getElementById('message').value,
+  }
+  const serviceId = "service_tkyrph6";
+const templateId = "template_ebba59o";
 
+emailjs.send(serviceId,templateId,params).then(
+  res => {
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('message').value = "";
+  }
+)
+}
 
 
 /* --- Morphing animation -- */
