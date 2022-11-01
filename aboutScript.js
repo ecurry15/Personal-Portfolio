@@ -86,6 +86,26 @@ contactBtnWasClicked = false;
   }
 });
 
+function sendMail(){
+  let params = {
+    name:document.getElementById('name').value,
+    email:document.getElementById('email').value,
+    message:document.getElementById('message').value,
+  }
+  const serviceId = "service_tkyrph6";
+const templateId = "template_ebba59o";
+console.log("email sent");
+
+emailjs.send(serviceId,templateId,params).then(
+  res => {
+    document.getElementById('name').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('message').value = "";
+  }
+)
+}
+
+
 const contactSubmitBtn = document.querySelector('.contact-modal__btn');
 const aboutThankYouMessage = document.querySelector('.about__contact-thankYou-message');
 
@@ -98,29 +118,14 @@ contactSubmitBtn.addEventListener('pointerdown', () => {
 contactModal.style.display = "none";
 contactBtnWasClicked = false;
 aboutThankYouMessage.style.display = "flex";
+sendMail();
 setTimeout(() => {
   aboutThankYouMessage.style.display = "none";
 }, "4000")
   }
 })
 
-const sendMail = () => {
-  let params = {
-    name:document.getElementById('name').value,
-    email:document.getElementById('email').value,
-    message:document.getElementById('message').value,
-  }
-  const serviceId = "service_tkyrph6";
-const templateId = "template_ebba59o";
 
-emailjs.send(serviceId,templateId,params).then(
-  res => {
-    document.getElementById('name').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('message').value = "";
-  }
-)
-}
 
 
 /* --- Morphing animation -- */
