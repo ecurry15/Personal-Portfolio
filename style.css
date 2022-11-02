@@ -390,7 +390,6 @@ transform: scale(1.04);
   width: 100%;
   height: 100%;
   position: relative;
-  animation: projects-load 1.1s ease-in;
 }
 .projects__title {
   font-size: 2.6rem;
@@ -398,6 +397,7 @@ transform: scale(1.04);
   color: var(--dark-blue);
   position: relative;
   z-index: 3;
+  animation: hero-load 700ms ease-in;
 }
 .projects-container {
   width: 100%;
@@ -409,6 +409,7 @@ transform: scale(1.04);
  flex-wrap: nowrap;
  z-index: 5;
  position: relative;
+ animation: projects-load 700ms ease-in;
 }
 .projects-svg {
   position: absolute;
@@ -417,6 +418,7 @@ transform: scale(1.04);
   width: 397px;
   height: 353px;
   fill: var(--white);
+  animation: hero-load 700ms ease-in;
 }
 .projects-container::-webkit-scrollbar {
  height: 13px;
@@ -565,6 +567,7 @@ transition: all .2s ease-in-out;
   justify-content: center;
   align-items: center;
   transition: all .2s ease-in-out;
+  animation: projects-load 700ms ease-in;
 }
 .projects__view-all > i {
   padding-left: 10px;
@@ -597,6 +600,7 @@ padding-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content: left;
+animation: hero-load 500ms ease-in;
 }
 .about__h2 {
   font-size: 2.8rem;
@@ -605,7 +609,6 @@ justify-content: left;
   z-index: 5;
   cursor: pointer;
   transition: all .2s ease-out;
-  animation: hero-load 700ms ease-in;
 }
 .about__svg {
   position: absolute;
@@ -613,7 +616,6 @@ justify-content: left;
   top: 70px;
   width: 321px;
   height: 371px;
-  animation: hero-load 700ms ease-in;
 }
 .about__card {
   height: 550px;
@@ -628,7 +630,6 @@ justify-content: left;
   transition: all .3s ease-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
-  animation: hero-load 700ms ease-in;
 }
 .about__card:hover {
   transform: scale(1.02);
@@ -678,7 +679,7 @@ justify-content: left;
   margin-top: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: all .2s ease-out;
-  animation: hero-load 700ms ease-in;
+  animation: hero-load 600ms ease-in;
 }
 .contact-btn:hover {
   width: 240px;
@@ -711,11 +712,11 @@ transform: translateY(-10px);
   z-index: 5;
   width: 100%;
   transition: all .2s ease-in-out;
-  animation: img-load 1s ease-in;
+  animation: img-load 700ms ease-in;
 }
 .about__smaller-screen-svg {
   display: none;
-  animation: hero-load 700ms ease-in;
+  animation: hero-load 500ms ease-in;
 }
 .about__blue-svg {
   position: absolute;
@@ -724,7 +725,7 @@ transform: translateY(-10px);
   left: -35px;
   top: -40px;
   transition: all .4s ease-in-out;
-  animation: img-background-load 900ms ease-in;
+  animation: img-background-load 600ms ease-in;
 }
 .about__modal-background-blur {
   position: absolute;
