@@ -35,6 +35,9 @@ navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.boxShadow = "0px 0px 6px black";
   navBarExtentedMenu.style.borderTop = "1px solid #fff";
   navBarIcon.style.fontSize = "0px";
+  setTimeout(() => {
+    navBarIcon.style.visibility = "hidden";
+  }, 400)
   if (isSmallMobile.matches == false) {
     extendedMenuClose.style.fontSize = "2rem";
   } else {
@@ -48,6 +51,7 @@ navBarIcon.addEventListener('pointerdown', function() {
   }, 250);
 })
 extendedMenuClose.addEventListener('pointerdown', function() {
+  navBarIcon.style.visibility = "unset";
   navBarExtentedMenu.style.height = "0px";
   navBarExtentedMenu.style.padding = "0px 20px 0px";
   navBarExtentedMenu.style.boxShadow = "none";

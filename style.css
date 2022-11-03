@@ -118,7 +118,7 @@ background-color: var(--light-blue);
 .fa-bars {
   display: none;
   font-size: 0px;
-  transition: all .3s ease-in-out;
+  transition: all .3s ease-in;
   cursor: pointer;
 }
 .fa-xmark {
@@ -127,7 +127,7 @@ background-color: var(--light-blue);
   color: var(--light-blue);
   right: 0;
   padding-right: 20px;
-  transition: all .4s ease-in-out;
+  transition: all .3s ease-in;
   cursor: pointer;
 }
 
