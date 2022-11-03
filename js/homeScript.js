@@ -1,14 +1,13 @@
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+//Method to get a set value for vh -- fixes mobile vh problem ---
 let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
+// set custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
-  // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-
+// copy email text on email icon click and display "copied" message 
 const copyTextTool = (htmlElement) => {
   if (!htmlElement) {
     return;
@@ -32,13 +31,17 @@ function () {
     copyText.style.display = "none";
   }, 2000)
 }
+// copy email text on email icon click and display "copied" message
 
+//mobile extended nav items
 const navBarIcon = document.querySelector('.fa-bars');
 const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
 const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
 const extendedMenuClose = document.querySelector('.fa-xmark');
 const isSmallMobile = window.matchMedia('(max-height: 580px)');
+//mobile extended nav items
 
+//Open mobile extended nav menu 
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
   navBarExtentedMenu.style.height = "250px";
@@ -60,7 +63,8 @@ navBarIcon.addEventListener('pointerdown', function() {
       section.style.display = "flex";
     })
   }, 250);
-})
+});
+//Close mobile extended nav menu
 extendedMenuClose.addEventListener('pointerdown', function() {
   navBarIcon.style.visibility = "unset";
   navBarExtentedMenu.style.height = "0px";
@@ -77,10 +81,10 @@ extendedMenuClose.addEventListener('pointerdown', function() {
     section.style.fontSize = "0px";
     section.style.display = "none";
   })
-})
+});
 
 
-/* --- Morphing animation -- */
+// --- Morphing animation -- 
 const tween = KUTE.fromTo(
   '#blob1',
   { path: '#blob1'},

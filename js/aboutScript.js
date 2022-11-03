@@ -1,3 +1,4 @@
+// copy email text on email icon click and display "copied" message --
 const copyTextTool = (htmlElement) => {
   if (!htmlElement) {
     return;
@@ -21,13 +22,17 @@ function () {
     copyText.style.display = "none";
   }, 2000)
 }
+// copy email text on email icon click and display "copied" message 
 
+//mobile extended nav items
 const navBarIcon = document.querySelector('.fa-bars');
 const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
 const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
 const extendedMenuClose = document.querySelector('.fa-xmark');
 const isSmallMobile = window.matchMedia('(max-height: 580px)');
+//mobile extended nav items
 
+//Open mobile extended nav menu 
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
   navBarExtentedMenu.style.height = "250px";
@@ -49,7 +54,8 @@ navBarIcon.addEventListener('pointerdown', function() {
       section.style.display = "flex";
     })
   }, 250);
-})
+});
+//Close mobile extended nav menu 
 extendedMenuClose.addEventListener('pointerdown', function() {
   navBarIcon.style.visibility = "unset";
   navBarExtentedMenu.style.height = "0px";
@@ -66,8 +72,9 @@ extendedMenuClose.addEventListener('pointerdown', function() {
     section.style.fontSize = "0px";
     section.style.display = "none";
   })
-})
+});
 
+//open contact modal on contact btn press ---
 const contactModalBackgroundBlur = document.querySelector('.about__modal-background-blur');
 const contactModal = document.querySelector('.about__contact-modal');
 const contactBtn = document.querySelector('.contact-btn');
@@ -78,7 +85,9 @@ contactBtnWasClicked = true;
 contactModalBackgroundBlur.style.display = "block";
 contactModal.style.display = "flex";
 });
+//open contact modal on contact btn press ---
 
+//close contact modal ---
 document.addEventListener('pointerdown', e => {
   if (contactBtnWasClicked) {
     const isContactModal = e.target.matches('[data-contact-form]');
@@ -89,7 +98,9 @@ contactBtnWasClicked = false;
     }
   }
 });
+//close contact modal ---
 
+// send input info to email on form submit ---
 function sendMail(){
   let params = {
     name:document.getElementById('name').value,
@@ -108,11 +119,8 @@ emailjs.send(serviceId,templateId,params).then(
   }
 )
 }
-
-
 const contactSubmitBtn = document.querySelector('.contact-modal__btn');
 const aboutThankYouMessage = document.querySelector('.about__contact-thankYou-message');
-
 contactSubmitBtn.addEventListener('pointerdown', () => {
   let formIsValid = contactModal.checkValidity();
   if (!formIsValid) {
@@ -127,7 +135,8 @@ setTimeout(() => {
   aboutThankYouMessage.style.display = "none";
 }, "4000")
   }
-})
+});
+// send input info to email on form submit ---
 
 
 

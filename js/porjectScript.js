@@ -1,3 +1,4 @@
+// copy email text on email icon click and display "copied" message 
 const copyTextTool = (htmlElement) => {
   if (!htmlElement) {
     return;
@@ -21,66 +22,17 @@ function () {
     copyText.style.display = "none";
   }, 2000)
 }
+// copy email text on email icon click and display "copied" message ---
 
-
-const projectImgContainer = document.getElementById('projectImgConatiner');
-const projectDescription = document.getElementById('projectDescription');
-const descriptionViewMore = document.querySelectorAll('.project-card__description-more');
-const projectDescriptionClose = document.querySelectorAll('.projectDescriptionClose');
-
-const expandDescription = (card) => {
-document.querySelector(`.project-card__img-container.${card}`).style.height = "38%";
-document.querySelector(`.project-card__description.${card}`).style.maxHeight = "130px";
-document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "normal";
-document.querySelector(`.project-card__description.${card}`).style.overFlowX = "scroll";
-document.querySelector(`.projectDescriptionClose.${card}`).style.display = "block";
-document.querySelector(`.project-card__description-more.${card}`).style.display = "none";
-};
-const closeDescription = (card) => {
-  document.querySelector(`.project-card__img-container.${card}`).style.height = "50%";
-  document.querySelector(`.project-card__description.${card}`).style.maxHeight = "30px";
-  document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "nowrap";
-  document.querySelector(`.projectDescriptionClose.${card}`).style.display = "none";
-  document.querySelector(`.project-card__description-more.${card}`).style.display = "block";
-  };
-  
-descriptionViewMore.forEach(e => {
-e.addEventListener('pointerdown', function() {
-  if (e.classList.contains('one')) {
-    expandDescription("one");
-  } else if (e.classList.contains('two')) {
-    expandDescription("two");
-  } else if (e.classList.contains('three')) {
-    expandDescription("three");
-  } else if (e.classList.contains('four')) {
-    expandDescription("four");
-  }
-});
-})
-
-projectDescriptionClose.forEach(e => {
-  e.addEventListener('pointerdown', function() {
-    if (e.classList.contains('one')) {
-      closeDescription("one");
-    } else if (e.classList.contains('two')) {
-      closeDescription("two");
-    } else if (e.classList.contains('three')) {
-      closeDescription("three");
-    } else if (e.classList.contains('four')) {
-      closeDescription("four");
-    }
-  });
-})
-
-const projectCard = document.querySelectorAll('.project-card');
-
-
+//mobile extended nav items
 const navBarIcon = document.querySelector('.fa-bars');
 const navBarExtentedMenu = document.querySelector('.nav-bar__extended-menu');
 const extendedMenuSection = document.querySelectorAll('.extended-menu__section');
 const extendedMenuClose = document.querySelector('.fa-xmark');
 const isSmallMobile = window.matchMedia('(max-height: 580px)');
+//mobile extended nav items
 
+//Open mobile extended nav menu 
 navBarIcon.addEventListener('pointerdown', function() {
   navBarExtentedMenu.style.display = "flex";
   navBarExtentedMenu.style.height = "250px";
@@ -102,7 +54,8 @@ navBarIcon.addEventListener('pointerdown', function() {
       section.style.display = "flex";
     })
   }, 250);
-})
+});
+//Close mobile extended nav menu 
 extendedMenuClose.addEventListener('pointerdown', function() {
   navBarIcon.style.visibility = "unset";
   navBarExtentedMenu.style.height = "0px";
@@ -119,7 +72,64 @@ extendedMenuClose.addEventListener('pointerdown', function() {
     section.style.fontSize = "0px";
     section.style.display = "none";
   })
-})
+});
+
+//project card and card items 
+const projectCard = document.querySelectorAll('.project-card');
+const projectImgContainer = document.getElementById('projectImgConatiner');
+const projectDescription = document.getElementById('projectDescription');
+const descriptionViewMore = document.querySelectorAll('.project-card__description-more');
+const projectDescriptionClose = document.querySelectorAll('.projectDescriptionClose');
+//project card and card items --
+
+//minimize project img, expand project description --
+const expandDescription = (card) => {
+document.querySelector(`.project-card__img-container.${card}`).style.height = "38%";
+document.querySelector(`.project-card__description.${card}`).style.maxHeight = "130px";
+document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "normal";
+document.querySelector(`.project-card__description.${card}`).style.overFlowX = "scroll";
+document.querySelector(`.projectDescriptionClose.${card}`).style.display = "block";
+document.querySelector(`.project-card__description-more.${card}`).style.display = "none";
+};
+descriptionViewMore.forEach(e => {
+  e.addEventListener('pointerdown', function() {
+    if (e.classList.contains('one')) {
+      expandDescription("one");
+    } else if (e.classList.contains('two')) {
+      expandDescription("two");
+    } else if (e.classList.contains('three')) {
+      expandDescription("three");
+    } else if (e.classList.contains('four')) {
+      expandDescription("four");
+    }
+  });
+  })
+//minimize project description, expand project img
+const closeDescription = (card) => {
+  document.querySelector(`.project-card__img-container.${card}`).style.height = "50%";
+  document.querySelector(`.project-card__description.${card}`).style.maxHeight = "30px";
+  document.querySelector(`.project-card__description.${card}`).style.whiteSpace = "nowrap";
+  document.querySelector(`.projectDescriptionClose.${card}`).style.display = "none";
+  document.querySelector(`.project-card__description-more.${card}`).style.display = "block";
+  };
+projectDescriptionClose.forEach(e => {
+  e.addEventListener('pointerdown', function() {
+    if (e.classList.contains('one')) {
+      closeDescription("one");
+    } else if (e.classList.contains('two')) {
+      closeDescription("two");
+    } else if (e.classList.contains('three')) {
+      closeDescription("three");
+    } else if (e.classList.contains('four')) {
+      closeDescription("four");
+    }
+  });
+});
+//minimize project description, expand project img ---
+
+
+
+
 
 
 
