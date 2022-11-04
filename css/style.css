@@ -860,8 +860,9 @@ transform: translateY(-10px);
   .about__contact-thankYou-message > p {
     font-size: 1.1rem;
   }
+
 /* ANIMATIONS ---- */
-@keyframes nav-load {
+@-webkit-keyframes nav-load {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -871,7 +872,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes nav-2-load {
+@-webkit-keyframes nav-2-load {
   0% {
     transform: translateY(100vh);
     opacity: 0;
@@ -881,7 +882,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes projects-load {
+@-webkit-keyframes projects-load {
   0% {
     transform: translatex(100vw);
     opacity: 0;
@@ -891,7 +892,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes home-img-box-shadow-load {
+@-webkit-keyframes home-img-box-shadow-load {
   0% {
     box-shadow: none;
   }
@@ -902,7 +903,7 @@ transform: translateY(-10px);
     box-shadow: inset -5px -3px 4px 0 #E7E7E7;
   }
 }
-@keyframes hero-load {
+@-webkit-keyframes hero-load {
   0% {
     transform: translatex(-100%);
     opacity: 0;
@@ -912,7 +913,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes img-load {
+@-webkit-keyframes img-load {
   0% {
     transform: translateY(100%);
     opacity: 0;
@@ -922,7 +923,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes img-background-load {
+@-webkit-keyframes img-background-load {
   0% {
     transform: translatex(100%);
     opacity: 0;
@@ -932,7 +933,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@keyframes abd {
+@-webkit-keyframes abd {
 0% {
   opacity: 0;
 }
