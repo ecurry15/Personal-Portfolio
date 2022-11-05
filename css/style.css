@@ -36,9 +36,6 @@ body {
   animation: nav-load var(--load-time) ease-in;
   z-index: 100;
 }
-#nav2 {
-  animation: nav-2-load var(--load-time) ease-in;
-}
 .main-nav__social-icons-container {
   display: flex;
   align-items: center;
