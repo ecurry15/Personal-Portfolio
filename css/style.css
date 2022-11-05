@@ -34,6 +34,7 @@ body {
   justify-content: space-between;
   top: 0;
   animation: nav-load var(--load-time) ease-in;
+  -webkit-animation: nav-load var(--load-time) ease-in;
   z-index: 100;
 }
 .main-nav__social-icons-container {
@@ -203,6 +204,7 @@ color: var(--light-blue);
   padding-left: 0;
   text-align: left;
   animation: hero-load var(--load-time) ease-in;
+  -webkit-animation: hero-load var(--load-time) ease-in;
 }
 .hero__hello {
   font-size: 4.5rem;
@@ -246,6 +248,7 @@ color: var(--light-blue);
   width: 60%;
   transition: all .2s ease-in-out;
   animation: hero-load var(--load-time) ease-in;
+  -webkit-animation: hero-load var(--load-time) ease-in;
 }
 .hero__description:hover {
   transform: scale(1.005);
@@ -332,6 +335,7 @@ color: var(--light-blue);
   z-index: 9;
   transition: all .2s ease-in-out;
   animation: home-img-box-shadow-load var(--load-time) ease-in;
+  -webkit-animation: home-img-box-shadow-load var(--load-time) ease-in;
 }
 .home__right-img-container:hover::after{
  transform: scale(1.041);
@@ -344,6 +348,7 @@ transform: scale(1.04);
   width: 100%;
   transition: all .2s ease-in-out;
   animation: img-load var(--load-time) ease-in;
+  -webkit-animation: img-load var(--load-time) ease-in;
   margin-top: auto;
 }
 .home__picture-circle {
@@ -353,6 +358,7 @@ transform: scale(1.04);
   z-index: 2;
   top: 70px;
   animation: img-background-load var(--load-time) ease-in;
+  -webkit-animation: img-background-load var(--load-time) ease-in;
   transition: all .4s ease-in-out;
 }
 .home__right-img-container:hover > .home__picture-circle {
@@ -366,6 +372,7 @@ transform: scale(1.04);
   top: 20px;
   right: 20px;
   animation: img-background-load var(--load-time) ease-in;
+  -webkit-animation: img-background-load var(--load-time) ease-in;
   transition: all .3s ease-in-out;
 }
 .home__right-img-container:hover > .picture-svg {
@@ -395,6 +402,7 @@ transform: scale(1.04);
   position: relative;
   z-index: 3;
   animation: hero-load 700ms ease-in;
+  -webkit-animation: hero-load 700ms ease-in;
 }
 .projects-container {
   width: 100%;
@@ -407,6 +415,7 @@ transform: scale(1.04);
  z-index: 5;
  position: relative;
  animation: projects-load 700ms ease-in;
+ -webkit-animation: projects-load 700ms ease-in;
 }
 .projects-svg {
   position: absolute;
@@ -416,6 +425,7 @@ transform: scale(1.04);
   height: 353px;
   fill: var(--white);
   animation: hero-load 700ms ease-in;
+  -webkit-animation: hero-load 700ms ease-in;
 }
 .projects-container::-webkit-scrollbar {
  height: 13px;
@@ -565,6 +575,7 @@ transition: all .2s ease-in-out;
   align-items: center;
   transition: all .2s ease-in-out;
   animation: projects-load 700ms ease-in;
+  -webkit-animation: projects-load 700ms ease-in;
 }
 .projects__view-all > i {
   padding-left: 10px;
@@ -598,6 +609,7 @@ display: flex;
 flex-direction: column;
 justify-content: left;
 animation: hero-load 500ms ease-in;
+-webkit-animation: hero-load 500ms ease-in;
 }
 .about__h2 {
   font-size: 2.8rem;
@@ -677,6 +689,7 @@ animation: hero-load 500ms ease-in;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: all .2s ease-out;
   animation: hero-load 600ms ease-in;
+  -webkit-animation: hero-load 600ms ease-in;
 }
 .contact-btn:hover {
   width: 240px;
@@ -710,10 +723,12 @@ transform: translateY(-10px);
   width: 100%;
   transition: all .2s ease-in-out;
   animation: img-load 700ms ease-in;
+  -webkit-animation: img-load 700ms ease-in;
 }
 .about__smaller-screen-svg {
   display: none;
   animation: hero-load 500ms ease-in;
+  -webkit-animation: hero-load 500ms ease-in;
 }
 .about__blue-svg {
   position: absolute;
@@ -723,6 +738,7 @@ transform: translateY(-10px);
   top: -40px;
   transition: all .4s ease-in-out;
   animation: img-background-load 600ms ease-in;
+  -webkit-animation: img-background-load 600ms ease-in;
 }
 .about__modal-background-blur {
   position: absolute;
@@ -848,6 +864,7 @@ transform: translateY(-10px);
     margin: auto;
     box-shadow: rgba(87, 87, 87, 0.19) 0px 2px 6px, rgba(114, 114, 114, 0.23) 0px 2px 2px;
     animation: about__thankYou-load 2s forwards;
+    -webkit-animation: about__thankYou-load 2s forwards;
   }
   .about__contact-thankYou-message > h2 {
     font-size: 2rem;
