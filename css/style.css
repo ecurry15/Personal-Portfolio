@@ -610,6 +610,7 @@ flex-direction: column;
 justify-content: left;
 animation: hero-load 500ms ease-in;
 -webkit-animation: hero-load 500ms ease-in;
+z-index: 5;
 }
 .about__h2 {
   font-size: 2.8rem;
@@ -631,7 +632,7 @@ animation: hero-load 500ms ease-in;
   width: 615px;
   background-color: var(--dark-blue);
   border-radius: 10px;
-  z-index: 5;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -710,6 +711,7 @@ animation: hero-load 500ms ease-in;
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  z-index: 1;
 }
 .about__img-container:hover .about__img {
 transform: scale(1.03);
@@ -739,6 +741,7 @@ transform: translateY(-10px);
   transition: all .4s ease-in-out;
   animation: img-background-load 600ms ease-in;
   -webkit-animation: img-background-load 600ms ease-in;
+  z-index: -1;
 }
 .about__modal-background-blur {
   position: absolute;
