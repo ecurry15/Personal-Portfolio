@@ -850,7 +850,7 @@ transform: translateY(-10px);
     right: 0;
     margin: auto;
     box-shadow: rgba(87, 87, 87, 0.19) 0px 2px 6px, rgba(114, 114, 114, 0.23) 0px 2px 2px;
-    animation: abd 2s forwards;
+    animation: about__thankYou-load 2s forwards;
   }
   .about__contact-thankYou-message > h2 {
     font-size: 2rem;
@@ -933,7 +933,7 @@ transform: translateY(-10px);
     opacity: 1;
   }
 }
-@-webkit-keyframes abd {
+@-webkit-keyframes about__thankYou-load {
 0% {
   opacity: 0;
 }
