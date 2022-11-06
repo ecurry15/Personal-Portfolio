@@ -90,21 +90,26 @@ contactModal.style.display = "flex";
 
 //close contact modal ---
 document.addEventListener('mousedown', e => {
-  if (contactBtnWasClicked) {
-    const isContactModal = e.target.matches('[data-contact-form]');
+  let isMobile = window.matchMedia("(pointer:coarse)").matches;
+  const isContactModal = e.target.matches('[data-contact-form]');
+  const isContactModalCloseBtn = e.target.matches('[data-contact-close-btn]');
+  //if pc close modal on either exit btn click or click outside of modal
+  if (contactBtnWasClicked && !isMobile) {
     if (!isContactModal) {
       contactModalBackgroundBlur.style.display = "none";
 contactModal.style.display = "none";
 contactBtnWasClicked = false;
     }
+    //if mobile -- only close modal on exit btn press
+  } else if (contactBtnWasClicked && isMobile) {
+    if (isContactModalCloseBtn) {
+      contactModalBackgroundBlur.style.display = "none";
+      contactModal.style.display = "none";
+      contactBtnWasClicked = false;
+    }
   }
 });
-//mobile -- close contact modal, only with close btn
-contactModalCloseBtn.addEventListener('pointerdown', () => {
-  contactModalBackgroundBlur.style.display = "none";
-contactModal.style.display = "none";
-contactBtnWasClicked = false;
-})
+
 //close contact modal ---
 
 // send input info to email on form submit ---
