@@ -78,6 +78,7 @@ extendedMenuClose.addEventListener('pointerdown', function() {
 const contactModalBackgroundBlur = document.querySelector('.about__modal-background-blur');
 const contactModal = document.querySelector('.about__contact-modal');
 const contactBtn = document.querySelector('.contact-btn');
+const contactModalCloseBtn = document.querySelector('.contact-model__close');
 let contactBtnWasClicked = false;
 
 contactBtn.addEventListener('pointerdown', () => {
@@ -88,7 +89,7 @@ contactModal.style.display = "flex";
 //open contact modal on contact btn press ---
 
 //close contact modal ---
-document.addEventListener('pointerdown', e => {
+document.addEventListener('mousedown', e => {
   if (contactBtnWasClicked) {
     const isContactModal = e.target.matches('[data-contact-form]');
     if (!isContactModal) {
@@ -98,6 +99,12 @@ contactBtnWasClicked = false;
     }
   }
 });
+//mobile -- close contact modal, only with close btn
+contactModalCloseBtn.addEventListener('pointerdown', () => {
+  contactModalBackgroundBlur.style.display = "none";
+contactModal.style.display = "none";
+contactBtnWasClicked = false;
+})
 //close contact modal ---
 
 // send input info to email on form submit ---
