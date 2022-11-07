@@ -585,6 +585,11 @@ transition: all .2s ease-in-out;
 .projects__view-all:hover > i {
   padding-left: 15px;
 }
+.about__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 .about {
   width: 100%;
   height: 100vh;
