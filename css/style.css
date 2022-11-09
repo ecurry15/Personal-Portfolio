@@ -525,7 +525,7 @@ transition: all .2s ease-in-out;
 }
 .about__main-left {
   position: absolute;
-width: 700px;
+width: 800px;
 height: calc(100% - 100px);
 padding-left: 150px;
 padding-top: 100px;
