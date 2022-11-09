@@ -33,8 +33,6 @@ body {
   position: fixed;
   justify-content: space-between;
   top: 0;
-  animation: nav-load var(--load-time) ease-in;
-  -webkit-animation: nav-load var(--load-time) ease-in;
   z-index: 100;
 }
 .main-nav__social-icons-container {
@@ -190,8 +188,6 @@ body {
   margin: 0;
   padding-left: 0;
   text-align: left;
-  animation: hero-load var(--load-time) ease-in;
-  -webkit-animation: hero-load var(--load-time) ease-in;
 }
 .hero__hello {
   font-size: 4.5rem;
@@ -228,8 +224,6 @@ body {
   cursor: pointer;
   width: 60%;
   transition: all .2s ease-in-out;
-  animation: hero-load var(--load-time) ease-in;
-  -webkit-animation: hero-load var(--load-time) ease-in;
 }
 .developer-text {
   color: var(--light-blue);
@@ -301,15 +295,11 @@ body {
   width: 100%;
   z-index: 9;
   transition: all .2s ease-in-out;
-  animation: home-img-box-shadow-load var(--load-time) ease-in;
-  -webkit-animation: home-img-box-shadow-load var(--load-time) ease-in;
 }
 .home__right-img-container > img {
   z-index: 5;
   width: 100%;
   transition: all .2s ease-in-out;
-  animation: img-load var(--load-time) ease-in;
-  -webkit-animation: img-load var(--load-time) ease-in;
   margin-top: auto;
 }
 .home__picture-circle {
@@ -318,8 +308,6 @@ body {
   position: absolute;
   z-index: 2;
   top: 70px;
-  animation: img-background-load var(--load-time) ease-in;
-  -webkit-animation: img-background-load var(--load-time) ease-in;
   transition: all .4s ease-in-out;
 }
 .picture-svg {
@@ -328,8 +316,6 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  animation: img-background-load var(--load-time) ease-in;
-  -webkit-animation: img-background-load var(--load-time) ease-in;
   transition: all .3s ease-in-out;
 }
 #blob4 {
@@ -355,8 +341,6 @@ body {
   color: var(--dark-blue);
   position: relative;
   z-index: 3;
-  animation: hero-load 700ms ease-in;
-  -webkit-animation: hero-load 700ms ease-in;
 }
 .projects-container {
   width: 100%;
@@ -368,8 +352,6 @@ body {
  flex-wrap: nowrap;
  z-index: 5;
  position: relative;
- animation: projects-load 700ms ease-in;
- -webkit-animation: projects-load 700ms ease-in;
 }
 .projects-svg {
   position: absolute;
@@ -378,8 +360,6 @@ body {
   width: 397px;
   height: 353px;
   fill: var(--white);
-  animation: hero-load 700ms ease-in;
-  -webkit-animation: hero-load 700ms ease-in;
 }
 .projects-container::-webkit-scrollbar {
  height: 13px;
@@ -518,8 +498,6 @@ transition: all .2s ease-in-out;
   justify-content: center;
   align-items: center;
   transition: all .2s ease-in-out;
-  animation: projects-load 700ms ease-in;
-  -webkit-animation: projects-load 700ms ease-in;
 }
 .projects__view-all > i {
   padding-left: 10px;
@@ -547,15 +525,13 @@ transition: all .2s ease-in-out;
 }
 .about__main-left {
   position: absolute;
-width: 700px;
+width: 1000px;
 height: calc(100% - 100px);
 padding-left: 150px;
 padding-top: 100px;
 display: flex;
 flex-direction: column;
 justify-content: left;
-animation: hero-load 500ms ease-in;
--webkit-animation: hero-load 500ms ease-in;
 z-index: 5;
 }
 .about__h2 {
@@ -632,8 +608,6 @@ z-index: 5;
   margin-top: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: all .2s ease-out;
-  animation: hero-load 600ms ease-in;
-  -webkit-animation: hero-load 600ms ease-in;
 }
 .about__main-right {
   height: 100%;
@@ -658,13 +632,9 @@ z-index: 5;
   width: 100%;
   margin-top: 42%;
   transition: all .2s ease-in-out;
-  animation: img-load 700ms ease-in;
-  -webkit-animation: img-load 700ms ease-in;
 }
 .about__smaller-screen-svg {
   display: none;
-  animation: hero-load 500ms ease-in;
-  -webkit-animation: hero-load 500ms ease-in;
 }
 .about__blue-svg {
   position: absolute;
@@ -673,8 +643,6 @@ z-index: 5;
   left: -35px;
   top: -40px;
   transition: all .4s ease-in-out;
-  animation: img-background-load 600ms ease-in;
-  -webkit-animation: img-background-load 600ms ease-in;
   z-index: -1;
 }
 .about__modal-background-blur {
@@ -806,6 +774,14 @@ z-index: 5;
   }
 
 
+  @keyframes about__thankYou-load {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 
 /* @Media ------- */
