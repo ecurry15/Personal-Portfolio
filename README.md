@@ -1,3 +1,3 @@
 # Personal-Portfolio
-
--- Live site - https://edwardcampbell.dev/
+1st version --
+-- Live site - https://ecurry15.github.io/Personal-Portfolio/
